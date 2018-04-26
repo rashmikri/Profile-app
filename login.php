@@ -11,11 +11,11 @@
 <body>
   <div class="container">
   <h2>Sign in</h2><br>
-  <form method="post" action="registration.php">
+  <form method="post" action="validation.php">
   	<div class="form-group">
       <label for="name">username:</label>
       <input type="text" name="user_name" class="form-control" id="name" placeholder="Enter userName">
-     </div>
+    </div>
      <div class="form-group">
       <label for="name">Password:</label>
       <input type="text" name="password" class="form-control" id="name" placeholder="Enter password">
