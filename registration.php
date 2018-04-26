@@ -31,13 +31,13 @@
      </div>
      <h5><B>Gender</B></h5>
     <label class="radio-inline">
-      <input type="radio" name="optradio">Male
+      <input type="radio" name="optradio" value="male">Male
     </label>
     <label class="radio-inline">
-      <input type="radio" name="optradio">Female
+      <input type="radio" name="optradio" value="female">Female
     </label>
     <label class="radio-inline">
-      <input type="radio" name="optradio">Others
+      <input type="radio" name="optradio" value="others">Others
     </label>
      <div class="form-group">
       <label for="email">Email id:</label>
@@ -54,9 +54,6 @@
     <div class="form-group">
       <label for="pwd">Password:</label>
       <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" name="remember"> Remember me</label>
     </div>
     <button type="submit" class="btn btn-primary">Register</button>
 
