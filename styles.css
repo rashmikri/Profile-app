@@ -1,5 +1,61 @@
-*{
+
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+body{
 	margin:0;
 	padding:0;
 	box-sizing: border-box;
+    font-family: sans-serif;
+    background: url(1.jpg) no-repeat;
+    background-size: cover;
+
+}
+
+h1{
+    text-align: center;
+}
+.text-box{
+    width: 50px;
+    font-size: 20px;
+    padding: 5px 0;
+    margin: 5px 0;
+    border-bottom: 1px solid #4caf50;
+}
+.text-box i{
+    width: 20px;
+    float: right;
+    text-align: center;
+
+}
+.text-box input{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: white;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+
+}
+.btn{
+    width: 100%;
+    background: none;
+    border: 2px solid #4caf50;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    font-color: #F21212;
+    cursor: pointer;
+    margin: 12px 0;
+
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }

@@ -1,29 +1,48 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
-<head><title>login</title>
-  <link rel="stylesheet" href="styles.css">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
+    <title>Sign in</title>
 </head>
 <body>
-  <div class="container">
-  <h2>Sign in</h2><br>
-  <form method="post" action="validation.php">
-  	<div class="form-group">
-      <label for="name">username:</label>
-      <input type="text" name="user_name" class="form-control" id="name" placeholder="Enter userName">
+    <form method="post"  onsubmit="return validation()" action="validate_login.php">
+    <div class="login_box">
+        <h1>Login</h1>
+        <div class="text_box">
+            <label for = "email">Email Id:</label>
+            <input type="text" name="email" placeholder="Enter your email id">   
+        </div>
+        <div class="text_box">
+            <label for="password">Password:</label>
+            <input type="text" name="password" placeholder="Enter your password">     
+        </div>
+        <input type="button" class="btn" value="Sign In">    
     </div>
-     <div class="form-group">
-      <label for="name">Password:</label>
-      <input type="text" name="password" class="form-control" id="name" placeholder="Enter password">
-     </div>
-     <br>
-      <button type="submit" class="btn btn-primary">Login</button>
-
-  </form>
-</div>
+</form>
+<script type="text/javascript">
+    function validation(){
+        var errors = [];
+         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,)3})+$/;
+         var email =  document.forms["form_data"]["email"].value;
+         var password = document.forms["form_data"]["password"].value;
+         if(email === ""){
+            errors[email] = "email should not be empty";
+         }
+         if(!email.match(mailformat)){
+            errors["mail"] = "Invalid mail";
+         }
+         if(password === ""){
+            errors["password"] = "password should not be empty";
+         }
+         if(!password.length >= 8){
+            errors["Password"] = "password lenght must be greater than 8"
+         }
+         if (Object.keys(errors).length === 0) {
+              return true;
+            } 
+            else {
+              return false;
+            }
+    }
+</script>
 </body>
 </html>

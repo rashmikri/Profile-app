@@ -14,7 +14,7 @@
  <div class="container">
   	<div class="form-horizontal">
     <center> <b> <u><h1>Sign up</h1></b></u><br></center>
-         <form name="form_data"   id="reg" method="post"  action="validate.php" onsubmit="return validate()" >
+         <form name="form_data"   id="reg" method="post"  action="validate.php"  >
   	         <div class="form-group">
               <label for="name">First Name:</label>
               <input type="text" class="form-control" id="fname"  name="first_name" placeholder="Enter FName" >
